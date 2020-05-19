@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="contact.xsl"?>
+<contact-info>
+<contactnos>
+	<branch>Mulund(W)branch</branch>
+	<num>02264205700</num>
+</contactnos>
+<contactnos>
+	<branch>Vashi branch</branch>
+	<num>02264402060</num>
+</contactnos>
+<contactnos>
+	<branch>Borivali(W)branch</branch>
+	<num>02228922489</num>
+</contactnos>
+</contact-info>

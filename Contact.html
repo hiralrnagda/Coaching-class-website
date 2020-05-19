@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Circle Of Excellence: Contact Us</title>
+	<link href="styles1.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript" src="ajax.js"></script>
+	</head>
+<body onload="p()">
+<div id="logo">
+<img src="logo.jpg" alt="logo">
+</div>
+<div class="animated fadeInDown" id="navbar">
+<a href="Home.html">Home</a>
+<a href="Downloads.html">Downloads</a> 
+<a href="Faculty.html">Faculty</a>
+<a href="Testimonials.html">Testimonials</a>
+<a class="wearehere" href="Contact.html">Contact Us</a></div>
+</div>
+<div id="wrapc">
+<br /><br />
+<a href="contact.xml"><button type="button">CLICK ON BUTTON TO GET PHONE NUMBERS</button></a>
+<br /><br />
+<br /><br />
+<div id="contactform">
+<form action="form_submit.php" name="cf" method="post">
+<table>
+<tr>
+	<td>Contact Details</td>
+</tr>
+<tr>
+	<td><input type="text" name="name" placeholder='UserName' id="userinput"/></td>
+</tr>
+<tr>
+	<td><p id="msg"></p></td>
+</tr>
+<tr>
+	<td><input type ="text" id="b" name="email" placeholder='Email-id'/></td>
+</tr>
+<tr>
+	<td><input type ="text" id="c" name="pno" placeholder='Phone Number'/></td>
+</tr>
+<tr>
+	<td><label>Interested Subject:</td>
+	<td><select name="sub" multiple="multiple">
+		<option value="spa">SPA</option>
+		<option val	ue="dsa">DSA</option>
+		<option value="java">JAVA</option>
+		<option value="bee">BEE</option>
+		<option value="math">MATH</option>
+		<option value="mech">MECHANICS</option>
+		<option value="ed">ENGG DRAWING</option></select></td>
+</tr>
+<tr>
+	<td><input type="submit" name="OK" value="OK" style="background-color:black;color:white" onclick="validate()" /></td>
+</tr>
+</table>
+</form>
+</div>
+<script type="text/JavaScript">
+function validate()
+{
+//window.alert("hi");
+a=document.getElementById("userinput").value;
+b=document.getElementById("b").value;
+c=document.getElementById("c").value;
+fail="";
+fail1="";
+fail2="";
+fail=validateName(a);
+fail1=validateEmail(b);
+fail2=validatePhoneno(c);
+if(fail=="")
+	return true;
+else
+{
+	window.alert(fail);
+	window.alert(fail1);
+	window.alert(fail2);
+	return false;
+}
+}
+function validateName(a){
+if(a=="")
+	return "No username was entered.\n";
+else if(a.length<5)
+	return "Username must be atleast 5 characters long.\n";
+
+return "";	
+}</script>
+<script>
+function validateEmail(b){
+//var count1=0;
+//var count2=0;
+//var i=0;
+//for (i=0;i<b.length;i++)
+//{
+//if(b.charAt(i)=='@'){
+//	count1++;
+//	alert(count1);}
+//if(b.chatAt(i)=='.')
+//	count2++;
+//}
+if(b=="")
+	return "No Email was entered.\n";
+//else if(/[^a-zA-Z0-9_-.@]/.test(b))
+	//return "Only a-z ,A-Z ,0-9 ,- ,.,@and _ allowed in email.\n";
+//else if((b.indexOf(".")==0)||(b.indexOf("@")==0)||(b.indexOf("-")==0)||(b.indexOf("_")==0))
+	//return "Symbols .,-,@ and _ cannot be first characters in email.\n";
+//if(count1!==1 || count2>=1)
+	//return "@ symbol should be used only once and . should be given atleast once.\n";
+else
+	return "";
+} </script>
+<script>		
+function validatePhoneno(c){
+if(c=="")
+	return "No phone number was entered.\n";
+else if(c.length<10)
+	return "Phone number should be valid numeric of 10 charcters length.\n";
+else 
+	return "";
+}
+</script>
+
+<div id="map">
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.529182331978!2d72.89967834887875!3d19.084427256607132!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c62baa94bd17%3A0x77adbe30135e3a82!2sAmber+Residency!5e0!3m2!1sen!2sin!4v1535904576173" height="300" width="900"><br />
+</iframe>
+</div>
+</div>
+</body>
+</html>
